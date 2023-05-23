@@ -23,14 +23,14 @@
             const status = 'Authorised';
             const state = params.get('state');
 
-            window.location.replace(`http://localhost:4300/pre-consent?code=${code}&id_token=${id_token}&status=${status}&state=${state}`);
+            window.location.replace(`http://localhost:4300/pre-payment?code=${code}&id_token=${id_token}&status=${status}&state=${state}`);
         }
         else {
             const error = params.get('error');
             const status = 'Rejected';
             const state = params.get('state');
 
-            window.location.replace(`http://localhost:4300/pre-consent?error=${error}&status=${status}&state=${state}`);
+            window.location.replace(`http://localhost:4300/pre-payment?error=${error}&status=${status}&state=${state}`);
         }
     </script>
 </body>
